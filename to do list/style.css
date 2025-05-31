@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9; /* Light background */
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #ffffff;
+  padding: 30px 20px;
+  width: 90%;
+  max-width: 450px;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #e95de4; /* Magenta heading */
+  font-size: 1.8rem;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  flex: 1 1 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  min-width: 150px;
+  background-color: #fff;
+  color: #000;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #e95de4; /* Magenta button */
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #ca42bc; /* Blue hover */
+}
+
+#taskCount {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+li {
+  list-style: none;
+  padding: 10px 15px;
+  background: #f1f1f1;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideIn 0.3s ease;
+  word-break: break-word;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+li span {
+  flex: 1;
+  text-align: left;
+  cursor: pointer;
+}
+
+li .actions button {
+  margin-left: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #e667c8;
+  transition: transform 0.2s;
+}
+
+li .actions button:hover {
+  transform: scale(1.2);
+  color: #d234d0;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 30px 10px;
+    padding: 20px 15px;
+  }
+
+  input[type="text"],
+  button {
+    flex: 1 1 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
